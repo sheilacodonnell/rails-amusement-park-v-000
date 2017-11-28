@@ -1,0 +1,10 @@
+   	<h1>Name: <%= @user.name %></h1>
+    <p>Mood: <%= @user.mood %></p>
+    <p>Happiness: <%= @user.happiness %></p>
+    <p>Nausea: <%= @user.nausea %></p>
+    <p>Height: <%= @user.height %></p>
+    <p>Tickets: <%= @user.tickets %></p>
+    <%= content_tag :p, 'ADMIN' if @user.admin %>
+    <%= link_to 'Sign Out', signout_path %>
+    <p><%= link_to 'Edit', edit_user_path(@user) %></p>
+    <p><%= link_to 'See attractions', attractions_path %></p>
